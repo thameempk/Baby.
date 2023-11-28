@@ -40,7 +40,7 @@ function Allproducts({isAdminLoged , cat, deleteItem }) {
                     item.map((item, index)=>(
                         <div className='col-md-3 col-6 mt-2' key={item.id}>
                           <CardGroup>
-                          <Card style={{width:"5rem", height:"24rem"}} className='shadow'>
+                          <Card style={{width:"12rem", height:"24rem"}} className='shadow'>
       <Link style={{textDecoration:"none", color:"black"}} to={`/admin/allproducts/${item.id}`}>
         <Card.Img variant="top" src={item.image} className='img-fluid mt-2' style={{height:"10rem", width:"10rem"}}/>
         <Card.Body>
