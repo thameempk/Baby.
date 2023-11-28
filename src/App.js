@@ -275,14 +275,6 @@ function App() {
 
   const orderTotal = ordersec.reduce((total, item)=> item.total + total, 0)
 
-  
-
-  // const indCart = () =>{
-    
-    
-  // }
-  // useEffect( ()=>{ indCart()}, [cart])
-
   const orderPlace = (orderdet) =>{
     const currentDate = new Date()
     const formattedDate = currentDate.toLocaleString()
@@ -297,6 +289,7 @@ function App() {
     data.splice(index, 1)
     setItems(data)
 }
+
   const [isAdminLoged, setIsAdminLoged] = useState(false)
   return (
     <div className="App">

@@ -16,18 +16,18 @@ function Home({ cartMin, cartPlus }) {
       <div>
         <Carousel fade className='shadow'>
           <Carousel.Item>
-            <img src={require(`../../../images/baby-goods-light-blue.jpg`)} alt="" style={{ width: "100%", maxHeight: "100vh" }} />
+            <img src={require(`../../../images/WhatsApp Image 2023-11-28 at 16.52.34_437d8868.jpg`)} alt="" style={{ width: "100%", maxHeight: "100vh" }} />
             <Carousel.Caption>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img src={require(`../../../images/1540.jpg`)} alt="" className='mt-0' style={{ width: "100%", maxHeight: "100vh" }} />
+            <img src={require(`../../../images/WhatsApp Image 2023-11-28 at 16.52.35_1f833ebf.jpg`)} alt="" className='mt-0' style={{ width: "100%", maxHeight: "100vh" }} />
 
             <Carousel.Caption>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img src={require(`../../../images/beauty-product-still-life.jpg`)} alt="" className='mt-0' style={{ width: "100%", maxHeight: "100vh" }} />
+            <img src={require(`../../../images/WhatsApp Image 2023-11-28 at 16.52.36_97238268.jpg`)} alt="" className='mt-0' style={{ width: "100%", maxHeight: "100vh" }} />
 
             <Carousel.Caption>
             </Carousel.Caption>

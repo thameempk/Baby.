@@ -35,7 +35,6 @@ function ProductPage({isAdminLoged, setIsAdminLoged}) {
               reader.readAsDataURL(file);
         }
     }
-    console.log(updatedItem);
   return (
     <>
     <Button className='mt-3' onClick={()=> navigate('/admin/allproducts')}>Back</Button>

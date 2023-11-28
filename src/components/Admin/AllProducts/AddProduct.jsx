@@ -20,20 +20,23 @@ function AddProduct({isAdminLoged}) {
     })
     const navigate = useNavigate()
     const handleImage = (e)=>{
-        setPrdId(pre => pre + 1)
+        
         const file = e.target.files[0];
         if(file){
             const reader = new FileReader();
             reader.onloadend = () => {
-                setProductDel({...productdet, id: prdId ,  image : reader.result});
+                setProductDel({...productdet,  image : reader.result});
               };
               reader.readAsDataURL(file);
         }
+       
     }
 
     const handleSubmit = () =>{
-        setItems([...item, productdet])
+        setPrdId((pre) => pre + 1)
+        setItems([...item, {...productdet, id:prdId}])
     }
+    console.log(item);
   return (
     <>
     <Button className='mt-3' onClick={()=>navigate('/admin/allproducts')}>Back</Button>
