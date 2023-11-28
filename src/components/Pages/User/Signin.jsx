@@ -71,7 +71,7 @@ function Signin({log}) {
         <br />
         <Button variant='success' onClick={()=>log(email, pass)}>Signin</Button>
         <p style={{fontWeight:"600"}}>Forgot Password? <Link onClick={()=>setForgot(true)}>reset</Link></p>
-        <p style={{fontWeight:"600"}}>New User? <Link to={'/register'}>login</Link></p>
+        <p style={{fontWeight:"600"}}>New User? <Link to={'/register'}>signup</Link></p>
         </div>
       )
     }
