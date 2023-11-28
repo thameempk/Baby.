@@ -20,10 +20,6 @@ function AddProduct({isAdminLoged}) {
     })
     const navigate = useNavigate()
     const handleImage = (e)=>{
-<<<<<<< HEAD
-        
-=======
->>>>>>> 70d2f51f7d776e1a8273d5f86b1d055148b101fa
         const file = e.target.files[0];
         if(file){
             const reader = new FileReader();
