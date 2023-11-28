@@ -17,7 +17,7 @@ function Shop({cartPlus, cartMin, ViewItem, priceItem, cat}) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
-    <div className='div'>
+    <div className='div mb-3'>
         <h1 className='header-shop' style={{textShadow:"2px 2px black"}}>Shop</h1>
         <br />
         <span onClick={handleShow} style={{fontWeight:"600"}} className="filter-span"> <FaFilter  className='filter'/> Filter</span>

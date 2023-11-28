@@ -22,7 +22,7 @@ function Filter({cartPlus, cartMin}) {
         <>
 
             {
-                <div className='container ind shadow' style={{backgroundColor:"white"}}>
+                <div className='container ind shadow mb-3' style={{backgroundColor:"white"}} >
                     <div className='child1 col-sm-12'>
                     <img src={Products?.image} alt="" className='img-fluid'/>
                     <Button className='mt-2' variant='secondary' onClick={()=>cartPlus(Products.id)}>+</Button>< span className='mt-2' style={{fontWeight:"600", fontSize:"20px"}}>{Products.qty}</span><Button className='mt-2' variant='secondary' onClick={()=>cartMin(Products.id)}>-</Button>

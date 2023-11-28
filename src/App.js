@@ -32,6 +32,7 @@ import AdminLogin from "./components/Admin/AdminLogin";
 import ProductsCategory from "./components/Admin/AllProducts/ProductsCategory";
 import AddCategory from "./components/Admin/AllProducts/AddCategory";
 import OrderStatus from "./components/Pages/OrderStatus/OrderStatus";
+import Footer from "./components/Footer/Footer";
 export const MyContext = React.createContext();
 export const MyContext1 = React.createContext();
 export const MyContext2 = React.createContext();
@@ -387,6 +388,7 @@ function App() {
 
                 <Route path="*" element={<PageNotFount />} />
               </Routes>
+              <Footer />
             </MyContext.Provider>
           </MyContext1.Provider>
         </MyContext2.Provider>

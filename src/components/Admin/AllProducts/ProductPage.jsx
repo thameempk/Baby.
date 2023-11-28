@@ -44,7 +44,7 @@ function ProductPage({isAdminLoged, setIsAdminLoged}) {
             
                 filterData?.id === edit ? (
                     <div>
-                         <div className='register login container-fluid shadow-lg'>
+                         <div className='register login container-fluid shadow-lg mb-3'>
                             <h1>Update Product</h1>
                          <br />
                         <label htmlFor="name"> Product Name:<br />
@@ -75,7 +75,7 @@ function ProductPage({isAdminLoged, setIsAdminLoged}) {
                         </div>
                     </div>
                 ) : (
-                    <div className='container mt-5'>
+                    <div className='container mt-5 mb-3'>
                 <div className='row shadow' style={{backgroundColor:'white',padding:"10px"}}>
                     <div className='col-12 col-md-6'>
                         <img src={filterData?.image} style={{maxHeight:"20rem"}} alt="" />
@@ -96,7 +96,7 @@ function ProductPage({isAdminLoged, setIsAdminLoged}) {
                 )
             
         ) :  (
-            <div>
+            <div className='mb-3'>
                 <p>admin is not loged</p>
                 <Link to={'/admin/login'}>Please Login</Link>
             </div>

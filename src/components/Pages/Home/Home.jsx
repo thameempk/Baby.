@@ -12,7 +12,7 @@ function Home({ cartMin, cartPlus }) {
   const {  addCart } = useContext(MyContext3)
   const filetrItem = item.filter((item) => item.offer <= 500)
   return (
-    <div className="home">
+    <div className="home mb-3">
       <div>
         <Carousel fade className='shadow'>
           <Carousel.Item>

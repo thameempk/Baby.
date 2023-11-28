@@ -29,7 +29,7 @@ function Admin({user, isAdminLoged , setIsAdminLoged, cat, deleteItem}) {
     <Button className='m-3' onClick={()=>setIsAdminLoged(false)}>Logout</Button>
     </div>
       ) :  (
-        <div>
+        <div className='mb-3'>
             <p>admin is not loged</p>
             <Link to={'/admin/login'}>Please Login</Link>
         </div>

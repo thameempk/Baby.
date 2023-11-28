@@ -43,7 +43,7 @@ function Users({ isAdminLoged  }) {
             </Table>
           </div>
         ) : (
-          <div>
+          <div className='mb-3'>
             <p>admin is not loged</p>
             <Link to={'/admin/login'}>Please Login</Link>
           </div>

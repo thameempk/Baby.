@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import "./Header.css"
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -9,9 +9,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from 'react-router-dom';
 import { MyContext, MyContext1 } from '../../../App';
 import { FaShoppingCart } from "react-icons/fa";
-import { MyContext2 } from '../../../App';
 function Header({logout, setSearch, handleSearch}) {
-  const {item} = useContext(MyContext2)
    const user = useContext(MyContext)
    const {login} = useContext(MyContext1)
   return (
