@@ -4,11 +4,10 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { MyContext3 } from '../../../App';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 import "./Home.css"
 function Home({ cartMin, cartPlus }) {
-  const nav = useNavigate()
   const { item } = useContext(MyContext2)
   const {  addCart } = useContext(MyContext3)
   const filetrItem = item.filter((item) => item.offer <= 500)
@@ -19,24 +18,18 @@ function Home({ cartMin, cartPlus }) {
           <Carousel.Item>
             <img src={require(`../../../images/baby-goods-light-blue.jpg`)} alt="" style={{ width: "100%", maxHeight: "100vh" }} />
             <Carousel.Caption>
-              <Button variant='danger' onClick={() => nav('/shop')}>SHOP NOW</Button>
-              <p style={{ fontSize: "40px", fontWeight: "600", fontFamily: "sans-serif", color: "orange" }}>40% off on all Products</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img src={require(`../../../images/1540.jpg`)} alt="" className='mt-0' style={{ width: "100%", maxHeight: "100vh" }} />
 
             <Carousel.Caption>
-              <Button variant='danger' onClick={() => nav('/shop')}>SHOP NOW</Button>
-              <p style={{ fontSize: "40px", fontWeight: "600", fontFamily: "sans-serif", color: "orange" }}>40% off on all Products</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img src={require(`../../../images/beauty-product-still-life.jpg`)} alt="" className='mt-0' style={{ width: "100%", maxHeight: "100vh" }} />
 
             <Carousel.Caption>
-              <Button variant='danger' onClick={() => nav('/shop')}>SHOP NOW</Button>
-              <p style={{ fontSize: "40px", fontWeight: "600", fontFamily: "sans-serif", color: "orange" }}>40% off on all Products</p>
             </Carousel.Caption>
           </Carousel.Item>
         </Carousel>

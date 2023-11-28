@@ -1,13 +1,11 @@
 import React, { useContext } from 'react'
-import { MyContext2, MyContext3 } from '../../../App'
+import { MyContext3 } from '../../../App'
 import { Button } from 'react-bootstrap'
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { Container } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
 import { Link } from 'react-router-dom';
 import './Products.css'
 function Products() {
-    const {item} = useContext(MyContext2)
     const {addCart,prd} = useContext(MyContext3)
     
   return (
@@ -16,33 +14,38 @@ function Products() {
     
       <h1 className='prd-head'>{prd.slice(0,1).map((item)=> item.category)}</h1>
 
-    <div>
-    {
-            prd.map((item)=>(
-              <div className='d-inline-flex'>
-              <Container >
-        <Row>
-            <Col  className="  card-up shadow"> 
-            <Link to={`/${item.id}`} key={item.id}> 
-                <img src={item.image} alt={item.name} className="img-fluid" />
-                </Link>
-                <br />
-                <span className="item-name" style={{fontSize:"12px"}}>{item.name}</span>
-                <br />
-                <span className="item-price" style={{textDecoration:"line-through" , opacity:".6px"}}>₹{item.price}</span> <span className="item-price">₹{item.offer}</span> <span style={{color: "green", fontSize: "14px"}}>40% off</span>
-                <br />
-                <span className="delivery">free delivery</span>
-                <br />
-                <Button className='mb-2' variant="outline-info" onClick={()=>addCart(item.id, 1)} >Add to cart</Button>
-            </Col>
-          
-            </Row>
-        </Container>
-        </div>
-                
+      <div className='container mt-5'>
+        <div className='row'>
+
+          {
+
+            prd.slice(-5).map((item) => (
+              <div className='col-md-3 col-6 mt-2' key={item.id}>
+                <CardGroup>
+                  <Card style={{ width: "12rem", height: "26rem" ,alignItems:"center"}} className='shadow d-flex'>
+                    <Link style={{ textDecoration: "none", color: "black" }} to={`/${item.id}`}>
+                      <Card.Img variant="top" src={item.image} className='img-fluid mt-2' style={{ height: "10rem", width: "10rem" }} />
+                      <Card.Body>
+                        <Card.Text style={{ fontWeight: "600" }}>Name:{item.name}</Card.Text>
+                        <Card.Text style={{ fontWeight: "600" }}>
+                          <span style={{textDecoration:"line-through"}}> ₹{item.price}</span>  {item.offer}
+                        </Card.Text>
+                        <Card.Text style={{ fontWeight: "600", color:"green" }}>
+                          {item.offerper}% off
+                        </Card.Text>
+                      </Card.Body>
+                    </Link>
+                    <Button variant="outline-info" onClick={() => addCart(item.id, 1)}>Add to cart</Button>
+                  </Card>
+
+                </CardGroup>
+
+              </div>
             ))
-        }
-    </div>
+
+          }
+        </div>
+        </div>
     
     </>
   )
