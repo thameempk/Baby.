@@ -43,7 +43,7 @@ function Shop({cartPlus, cartMin, ViewItem, priceItem, cat}) {
 
           {
 
-            item.slice(-5).map((item) => (
+            item.map((item) => (
               <div className='col-md-3 col-6 mt-2' key={item.id}>
                 <CardGroup>
                   <Card style={{ width: "12rem", height: "26rem" ,alignItems:"center"}} className='shadow d-flex'>
